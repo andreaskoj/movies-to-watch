@@ -26,7 +26,7 @@ function searchMovies(querry) {
     console.log(responseObj.results[2].title); });   
     }    
 
-    // controllers
+    // controllerss
     $("#addButton").click(function (){
             searchMovies("Batman"); 
         });
