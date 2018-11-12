@@ -1,5 +1,6 @@
 html {
 font-family: 'Raleway', sans-serif !important;   
+    
 }
 
 .container {
@@ -9,4 +10,40 @@ margin-left: auto;
 margin-right: auto;
 }
 
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+    border-color: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
 
+textarea:focus,
+input[type="text"]:focus,
+ .uneditable-    input:focus {
+    border-color: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    outline: -webkit-focus-ring-color auto 5px;
+    border-color: dimgrey;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+.liElement {
+    list-style-type: none;
+    background-color: lightcyan;
+}
+
+.poster {
+    border-radius: 5px;
+}
+
+.titleItem {
+    display: inline;
+    
+}
