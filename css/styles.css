@@ -23,12 +23,14 @@ margin-right: auto;
 
 textarea:focus,
 input[type="text"]:focus,
- .uneditable-    input:focus {
+ .uneditable-input:focus {
     border-color: none;
     box-shadow: none;
     -webkit-box-shadow: none;
     outline: -webkit-focus-ring-color auto 5px;
-    border-color: dimgrey;
+    border-color: #343a40;
+    outline: none; 
+    
 }
 ul {
     padding: 0;
