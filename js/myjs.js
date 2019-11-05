@@ -16,20 +16,22 @@ function searchMovies(querry) {
     
     $.get(url, function(responseObj){
         
+        $("#dropdown").show();
+        
         var titleItem, posterItem, yearItem, descriptionItem;
         titleItem = responseObj.results[0].title;
         posterItem = "http://image.tmdb.org/t/p/w92/"+responseObj.results[0].poster_path;
         yearItem = responseObj.results[0].release_date;
         descriptionItem = responseObj.results[0].overview;
         
-        $(".items-list-result").append("<li class='liElement'><img class='poster' src=" +posterItem+"><div class='titleItem'>"+ titleItem +"</div><div class='yearItem'>" + yearItem +"</div><div>"+descriptionItem+"</div><img src=/assets/baseline-add-24px.svg></li>");
+        $("#dropdown").append("<li class='liElement dropdown-elem'><img class='poster' src=" +posterItem+"><div class='titleItem'>"+ titleItem +"</div><div class='yearItem'>" + yearItem +"</div><div>"+descriptionItem+"</div><img src=/assets/baseline-add-24px.svg></li>");
         
-        $(".items-list-result").append("<li>"+ responseObj.results[1].title +"</li>");
-        $(".items-list-result").append("<li>"+ responseObj.results[2].title +"</li>");
+        $("#dropdown").append("<li>"+ responseObj.results[1].title +"</li>");
+        $("#dropdown").append("<li>"+ responseObj.results[2].title +"</li>");
         console.log(responseObj.results[2]);    
     })
 }    
-        
+   
     // event handlers 
     $("#addButton").on("click" , function (){
 //            searchMovies($('#searchMovies').val()); 
@@ -38,6 +40,14 @@ function searchMovies(querry) {
     
     var typingInterval = 800;
     var timeoutRef;
+    
+//    $("#searchMoviesInput").focus(() => $("#dropdown").show());
+    $("#searchMoviesInput").focusout(() => {
+        $("#dropdown").hide();
+        $("#searchMoviesInput").val('');
+        $("#dropdown").empty();
+        
+    });
     
     $("#searchMoviesInput").on('keyup', function(){
         console.log("keyup")

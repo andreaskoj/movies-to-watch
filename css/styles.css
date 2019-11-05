@@ -1,13 +1,12 @@
 html {
-font-family: 'Raleway', sans-serif !important;   
-    
+    font-family: 'Raleway', sans-serif !important;
 }
 
 .container {
-background: yellow;
-width: 400px;
-margin-left: auto;
-margin-right: auto;
+    background: yellow;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .btn:focus,
@@ -28,24 +27,35 @@ input[type="text"]:focus,
     box-shadow: none;
     -webkit-box-shadow: none;
     outline: -webkit-focus-ring-color auto 5px;
-    border-color: #343a40;
-    outline: none; 
-    
+    border-color: darkgray;
+    outline: none;      
 }
+
+.input{
+    margin: 0 !important;
+}
+
+#dropdown{   
+    display: none;
+    position: relative;
+}
+
+.dropdown-elem{ 
+    width: 100%;
+    height: 20p;
+}
+
 ul {
+    list-style: none;
     padding: 0;
     margin: 0;
 }
-.liElement {
-    list-style-type: none;
-    background-color: lightcyan;
-}
+
 
 .poster {
     border-radius: 5px;
 }
 
 .titleItem {
-    display: inline;
-    
+    display: inline;   
 }
