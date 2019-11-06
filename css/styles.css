@@ -9,17 +9,6 @@ html {
     margin-right: auto;
 }
 
-.btn:focus,
-.btn:active:focus,
-.btn.active:focus,
-.btn.focus,
-.btn:active.focus,
-.btn.active.focus {
-    border-color: none;
-    box-shadow: none;
-    -webkit-box-shadow: none;
-}
-
 textarea:focus,
 input[type="text"]:focus,
  .uneditable-input:focus {
@@ -35,27 +24,55 @@ input[type="text"]:focus,
     margin: 0 !important;
 }
 
-#dropdown{   
+#dropdown{  
+    margin 0;
+    padding: 0;
+    list-style: none;
     display: none;
-    position: relative;
 }
 
 .dropdown-elem{ 
+    position: relative;
+    background-color: whitesmoke;
     width: 100%;
-    height: 20p;
+    height: auto;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.dropdown-elem:nth-child(2){
+    background-color: gainsboro;
 }
 
-
-.poster {
-    border-radius: 5px;
+.posterSearch{
+    vertical-align: unset;
+    text-align: start;
+    width: 100px;
+    display: inline-block;
+    margin: 5px; 
+    border-radius: 10px;
 }
 
-.titleItem {
-    display: inline;   
+.titleSearch{
+    margin: 10px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.yearSearch{
+    margin-top: 10px;
+    display: inline-block;  
+    font-size: 14px;
+}
+
+.descriptionSearch{
+    font-size: 14px;
+    text-align: justify;
+    margin: 10px;
+    
+}
+
+.desBlock{
+    width: 380px;
+    height: auto;
+    display: inline-block;
 }
