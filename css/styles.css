@@ -8,6 +8,11 @@ html {
     margin-left: auto;
     margin-right: auto;
 }
+ul {
+    list-style: none;
+    margin 0;
+    padding: 0;
+}
 
 textarea:focus,
 input[type="text"]:focus,
@@ -29,37 +34,57 @@ input[type="text"]:focus,
     padding: 0;
     list-style: none;
     display: none;
+    z-index: 1;
+    position: absolute;
 }
 
 .dropdown-elem{ 
+    padding: 10px;
     position: relative;
-    background-color: whitesmoke;
+    background-color: whitesmoke;*/
     width: 100%;
     height: auto;
 }
 
-.dropdown-elem:nth-child(2){
-    background-color: gainsboro;
+.dropdown-elem:hover{ 
+    background-color: lightgray;
+    border-radius:0px;
+    cursor: pointer;
 }
 
+.my-movies .dropdown-elem:hover{ 
+    background-color: white;
+    border-radius:0px;
+    cursor: default;
+}
+
+.my-movies .dropdown-elem{ 
+    background-color: white;
+
+}
+
+
+.dropdown-elem:nth-child(2){
+
+}
+
+
 .posterSearch{
-    vertical-align: unset;
-    text-align: start;
     width: 100px;
-    display: inline-block;
     margin: 5px; 
     border-radius: 10px;
+    vertical-align: top;
 }
 
 .titleSearch{
-    margin: 10px;
+    margin-left: 10px;
     display: inline-block;
     font-weight: bold;
     font-size: 18px;
 }
 
 .yearSearch{
-    margin-top: 10px;
+    margin-left: 10px;
     display: inline-block;  
     font-size: 14px;
 }
@@ -68,11 +93,10 @@ input[type="text"]:focus,
     font-size: 14px;
     text-align: justify;
     margin: 10px;
-    
 }
 
 .desBlock{
-    width: 380px;
+    width: 370px;
     height: auto;
     display: inline-block;
 }
